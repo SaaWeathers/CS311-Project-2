@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top YouTubers of Today</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <h1>Top YouTubers of Today</h1>
+      <p>Find YouTube channels and compare their total views and subscribers.</p>
+
+      <form id="youtube-search-form" role="search">
+        <label for="youtube-search">Search for any YouTuber:</label>
+        <input
+          id="youtube-search"
+          type="search"
+          placeholder="Enter a YouTuber's name"
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      <button id="fetch-creators" type="button">Find Popular YouTubers</button>
+      
+      <p id="status-message" role="status" aria-live="polite">
+        Search for a channel or load popular YouTube results.
+      </p>
+
+      <label for="sort-creators">Sort by:</label>
+
+      <select id="sort-creators">
+        <option value="views-desc">Most total views</option>
+        <option value="views-asc">Least total views</option>
+        <option value="subscribers-desc">Most subscribers</option>
+        <option value="subscribers-asc">Least subscribers</option>
+        <option value="name-asc">A &gt; Z</option>
+        <option value="name-desc">Z &gt; A</option>
+      </select>
+
+      <div id="creator-grid" class="creator-grid"></div>
+    </main>
+  </body>
+</html>
